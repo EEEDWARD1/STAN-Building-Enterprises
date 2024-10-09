@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
+  <title>Stan Building Enterprises</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
     <ul class="sidebar">
       <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
+      <li><a href="..\index.html">Home</a></li>
+      <li><a href="..\html\projects.html">Services</a></li>
       <li><a href="#">About Us</a></li>
       <li><a href="#">Contact Us</a></li>
     </ul>
     <ul>
-      <li><a href="#">SBE</a></li>
-      <li class="hideOnMobile"><a href="#">Home</a></li>
-      <li class="hideOnMobile"><a href="#">Services</a></li>
+      <li><a href="..\index.html"><img src="..\images\SBEltdGreenBlack.png"></a></li>
+      <li class="hideOnMobile"><a href="..\index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="..\html\projects.html">Projects</a></li>
       <li class="hideOnMobile"><a href="#">About Us</a></li>
       <li class="hideOnMobile"><a href="#">Contact Us</a></li>
       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
@@ -28,29 +28,96 @@
 
   <div class="content-wrapper">
     <div class="banner">
-
     </div>
     <div class="services">
+      <h2>Our Services</h2>
+      <hr>
+      <div class="card-container">
 
-    </div>
-    <div class="contact">
+        <div class="card">
+          <div class="card-image">
+            <img src="..\images\tempimage.jpg">
+          </div>
+          <div class="card-body">
+            <h3>Duct Cleaning and Repair</h3>
+            <hr>
+            <p>Ventilation systems and ductwork can accumulate dirt over time, often concealing hidden issues. That's why regular duct cleaning is crucial. Proper cleaning of ventilation units, distribution ductwork, and grilles is essential for the efficient functioning of a building.</p>
+          </div>
+        </div>
 
-    </div>
-    <div class="About">
+        <div class="card">
+          <div class="card-image">
+            <img src="..\images\tempimage.jpg">
+          </div>
+          <div class="card-body">
+            <h3>Heat Pump installations</h3>
+            <hr>
+            <p>Want to lower your heating and water bills while reducing carbon emissions? Our experienced team offers tailored heat pump systems for homes and businesses. Contact us for free advice and a no-obligation quote.</p>
+          </div>
+        </div>
 
+        <div class="card">
+          <div class="card-image">
+            <img src="..\images\tempimage.jpg">
+          </div>
+          <div class="card-body">
+            <h3>Boiler Installations and Repairs</h3>
+            <hr>
+            <p>We specialize in installing high-efficiency condensing gas boilers for homes, ensuring effective heating throughout your living space.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="..\images\tempimage.jpg">
+          </div>
+          <div class="card-body">
+            <h3>Fan Motor Replacement</h3>
+            <hr>
+            <p>We specialize in rewinding, redesigning, and repairing electric motors, fans, AHU units, and pumps across London.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="..\images\tempimage.jpg">
+          </div>
+          <div class="card-body">
+            <h3>A/C Installations</h3>
+            <hr>
+            <p>We offer a variety of products to manage climate control year-round by designing and installing systems that deliver cool, fresh air.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="..\images\tempimage.jpg">
+          </div>
+          <div class="card-body">
+            <h3>System Installation</h3>
+            <hr>
+            <p>We specialize in a range of products designed to provide the best solutions for your home.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="quote-container">
+      <h1>GET A FREE QUOTE TODAY!</h1>
+      <hr />
+      <p>Contact Via Email: stanimir@sbenterprises.co.uk</p>
+      <p>or Fill out the Form Below and We'll Get Back to You with a Quote</p>
+      <button class="contact-button">Contact Us</button>
   </div>
-
-
-  <footer class="footer">
-    <div class="footer-content">
-      <p>Footer Text</p>
-      <ul class="footer-links">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-      </ul>
-  <footer>
+    <footer class="footer">
+      <div class="footer-content">
+        <ul class="footer-links">
+          <li><a href="#">Copyright</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+        </ul>
+        <p>STAN BUILDING ENTERPRISE trading as SBE ltd and STAN BUILDING ENTERPRISES | Registered in England | Company No: 07572623 | Registered Office 47 Courtman Road, London, N17 7HT</p>
+    <footer>
+  </div>
 
   <script>
     function showSidebar(){

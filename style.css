@@ -1,32 +1,42 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-.content-wrapper{
+.content-wrapper {
     flex: 1;
 }
-nav{
+
+nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-nav ul{
+
+nav ul {
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    }
-nav li{
+}
+
+nav ul li img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav li {
     height: 50px;
-    }
-nav a{
+}
+
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -34,15 +44,19 @@ nav a{
     align-items: center;
     color: black;
 }
-nav a:hover{
+
+nav a:hover {
     background-color: #f0f0f0;
+    color: #3caf70;
 }
-nav li:first-child{
+
+nav li:first-child {
     margin-right: auto;
 }
-.sidebar{
+
+.sidebar {
     position: fixed;
-    top: 0; 
+    top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
@@ -55,37 +69,230 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
 }
-.sidebar li{
+
+.sidebar li {
     width: 100%;
 }
-.sidebar a{
+
+.sidebar a {
     width: 100%;
 }
-.menu-button{
+
+.menu-button {
     display: none;
 }
-@media(max-width: 800px){
-    .hideOnMobile{
+
+@media (max-width: 800px) {
+    .hideOnMobile {
         display: none;
     }
-    .menu-button{
+    .menu-button {
         display: block;
     }
 }
-@media(max-width: 400px){
-    .sidebar{
+
+@media (max-width: 400px) {
+    .sidebar {
         width: 100%;
+    }
 }
+
+@media (min-width: 2000px) {
+    nav {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 }
 
 .footer {
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    background-color: #333;
+    background-color: #3a4a40;
     color: white;
-    padding: 20px;
-    position: fixed; /* Pin to the bottom */
-    bottom: 0; /* Position at the bottom */
     width: 100%; /* Full width */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    background-color: red;
+}
+
+.footer-content p {
+    font-size: 10px;
+    max-width: 600px;
+}
+
+.footer-links {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the items horizontally */
+    color: white;
+}
+
+.services {
+    display: flex;               /* Use flexbox */
+    flex-direction: column;      /* Stack children vertically */
+    align-items: center;        /* Center items horizontally */
+    text-align: center;          /* Center text */
+    margin: 20px 0;             /* Optional: Add some margin for spacing */
+    background-color: aqua;
+}
+
+.services h2 {
+    font-size: 30px;            /* Adjust the font size if needed */
+    font-weight: bold;         /* Make the text bold */
+}
+
+.services hr {
+    border: 2px solid #3caf70; /* Add a green border */
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Flexbox layout for card container */
+.card-container {
+    text-align: start;
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap to the next row */
+    justify-content: center; /* Center the cards in the middle */
+    gap: 20px; /* Add space between cards */
+    padding: 10px; /* Add some padding to the container */
+    max-width: 1200px; /* Limit the maximum width of the container */
+    margin: 0 auto; /* Center the container itself */
+  }
+  
+  /* Website Cards (services page) */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 300px; /* Fixed card width */
+    height: 400px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add margin at the bottom of the card */
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card image styles */
+  .card-image {
+    width: 100%;
+    height: 40%;
+    background-color: red; /* Placeholder color */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  /* Card body styles */
+  .card-body {
+    padding: 15px;
+    flex-grow: 1; /* Ensure the card body expands to fill space */
+    border-top: 5px solid rgba(60, 175, 112, 1); /* Add a border at the top */
+    font-size: 16px;
+}
+  
+  .card-body h3 {
+    font-size: 20px;
+  }
+
+  .card-body hr{
+    margin: 3px 0;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 1024px) {
+    .card {
+      width: 45%; /* Two cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card-container {
+      padding: 10px 20px; /* Add extra padding on smaller screens */
+    }
+    .card {
+      width: 100%; /* One card per row on smaller screens */
+    }
+  }
+
+  .quote-container {
+    background-color: #0f0f99; /* Dark blue background */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 50px 0; /* Add padding to the container */
+    margin: 0; /* Remove margin to stretch to the edges */
+    width: 100%; /* Use viewport width to ensure full width */
+    position: relative; /* Ensure it stays within the viewport */
+    left: 50%; /* Shift left by 50% */
+    right: 50%; /* Shift right by 50% */
+    transform: translateX(-50%); /* Center the container */
+}
+
+@media (max-width: 768px) {
+    .quote-container {
+        padding: 30px 0; /* Adjust padding for smaller screens */
+    }
+
+    .quote-container h1 {
+        font-size: 28px; /* Adjust font size for heading */
+    }
+
+    .quote-container p {
+        font-size: 16px; /* Adjust font size for paragraphs */
+    }
+}
+
+.quote-container h1 {
+    font-size: 36px; /* Heading font size */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+}
+
+.quote-container hr {
+    border: 0; /* Remove border */
+    height: 2px; /* Set height */
+    background: #3caf70; /* Use brand color for the line */
+    margin: 20px auto; /* Margin for spacing */
+    width: 50%; /* Width of the line */
+}
+
+.quote-container p {
+    margin: 10px 10px; /* Add margin above and below paragraph */
+    font-size: 18px; /* Font size for paragraphs */
+}
+
+.contact-button {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #3caf70; /* Brand color for the border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Cursor pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.contact-button:hover {
+    background-color: #3caf70; /* Use brand color on hover */
+    color: white; /* Keep text white on hover */
 }
