@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Highlight the email and make it bigger
         emailElement.style.transition = "all 0.5s ease";
         emailElement.style.fontSize = "2em";
-        emailElement.style.backgroundColor = "#3caf70";
         emailElement.style.color = "white";
         emailElement.style.padding = "10px";
         emailElement.style.borderRadius = "5px";
